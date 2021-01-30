@@ -26,7 +26,7 @@
                 <li><a href="#">Home</a></li>
                 <li><a href="#">About Us</a></li>
                 <li><a href="#">Contact</a></li>
-                <li><a class="active" href="#">Sign Up</a></li>
+                <li><a class="" href="#">Sign Up</a></li>
             </ul>
         </nav>
     </header>
@@ -59,8 +59,8 @@
                     <input id="first-class-count" class="inp-style inp-width" type="number" name="" class="form-control text-center" value="0">
                 </div>
                 <div class="">
-                    <button onclick="flightTicket('first-class', true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
-                    <button onclick="flightTicket('first-class', false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                    <button onclick="flightTicket('first-class', true)" class="btn btn-default plus-minus-btn"><i class="fas fa-plus"></i></button>
+                    <button onclick="flightTicket('first-class', false)" class="btn btn-default plus-minus-btn"><i class="fas fa-minus"></i></button>
                 </div>
             </div>
             
@@ -70,8 +70,8 @@
                     <input id="economy-count" class="inp-style inp-width" type="number" name="" class="form-control text-center" value="0">
                 </div>
                 <div class="">
-                    <button onclick="flightTicket('economy', true)" class="btn btn-default"><i class="fas fa-plus"></i></button>
-                    <button onclick="flightTicket('economy', false)" class="btn btn-default"><i class="fas fa-minus"></i></button>
+                    <button onclick="flightTicket('economy', true)" class="btn btn-default plus-minus-btn"><i class="fas fa-plus"></i></button>
+                    <button onclick="flightTicket('economy', false)" class="btn btn-default plus-minus-btn"><i class="fas fa-minus"></i></button>
                 </div>
             </div>
             <div class="calculations">
@@ -129,7 +129,7 @@
              }
              ticketNumberInput.value = newTicketCount;
              calculateTotal();
-         }
+        }
 
          function calculateTotal(){
              const firstTicketInput = document.getElementById('first-class-count');
@@ -146,10 +146,7 @@
 
              const grandTotal = totalPrice + tax;
              document.getElementById('grand-total').innerText = '$' + grandTotal;
-         }
-
-        
-
+        }
 
          function booking () {
            alert("Congratulations! Your flight booking is confirmed.");
